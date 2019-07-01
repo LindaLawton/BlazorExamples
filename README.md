@@ -10,3 +10,16 @@ Shows how to pass a method into a Blazor component.  Example spawned from my que
 - Button two uses Action 
 
 Apparntly there is also an issue related to this [EventCallback: Updates to Event Handling and Binding](https://github.com/aspnet/AspNetCore/issues/6351)
+
+
+## Using a component library
+
+Createing a component library will give you the ablity to use your components across projects.
+
+Create a new component libary using the cli.
+
+    dotnet new blazorlib -n UsComponentLibrary.Lib
+
+Remember to edit the _Imports.razor and add a using for your library 
+
+    @using UsComponentLibrary.Lib.Components
