@@ -1,0 +1,22 @@
+﻿@page "/"
+
+<h1>Counter</h1>
+
+<div>&copy; Linda Lawton 2019</div><br/><br />
+
+<p>Current count: @currentCount</p>
+
+
+<MyButton Label="@Label" ExternalMethod="@((param) => { btnClick(); })"></MyButton>
+
+@code {
+
+    string Label = "Click Me";
+    int currentCount = 0;
+
+    public void btnClick()
+    {
+        currentCount++;
+
+    }
+}
