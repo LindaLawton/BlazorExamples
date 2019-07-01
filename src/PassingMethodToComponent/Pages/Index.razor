@@ -2,21 +2,30 @@
 
 <h1>Counter</h1>
 
-<div>&copy; Linda Lawton 2019</div><br/><br />
+<div>&copy; Linda Lawton 2019</div><br /><br />
 
-<p>Current count: @currentCount</p>
+<p>Current count: @buttonOneCounter</p>
+<MyButton Label="@Label1" ExternalMethod="@((param) => { btnOneClick(); })" ></MyButton>
 
 
-<MyButton Label="@Label" ExternalMethod="@((param) => { btnClick(); })"></MyButton>
+<p>Current count: @buttonTwoCounter</p>
+<MyButtontwo Label="@Label2" ParentMethod="@btnTwoClick"></MyButtontwo>
 
 @code {
 
-    string Label = "Click Me";
-    int currentCount = 0;
+    string Label1 = "ButtonOne";
+    int buttonOneCounter = 0;
 
-    public void btnClick()
+    string Label2 = "Option two";
+    int buttonTwoCounter = 0;
+
+    public void btnOneClick()
     {
-        currentCount++;
+        buttonOneCounter++;
+    }
 
+    private void btnTwoClick()
+    {
+        buttonTwoCounter++;
     }
 }
